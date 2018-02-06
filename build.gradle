@@ -22,6 +22,7 @@ import org.apache.tools.ant.filters.ReplaceTokens
  * Project setup
  * ======================================================== */
 
+apply plugin: 'war'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
@@ -208,6 +209,10 @@ excludedConfigFiles.add 'AutoImportTemplate.ftl'
 excludedConfigFiles.add 'axis2'
 excludedConfigFiles.add 'barcode'
 
+war{
+ archiveName = 'ROOT.war'
+ destinationDir = file('webapps')
+}
 
 sourceSets {
     main {
