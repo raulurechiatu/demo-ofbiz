@@ -211,7 +211,6 @@ excludedConfigFiles.add 'barcode'
 
 war{
  archiveName = 'ROOT.war'
- destinationDir = file('webapps')
 }
 
 sourceSets {
